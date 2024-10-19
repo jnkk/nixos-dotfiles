@@ -5,6 +5,7 @@
   imports = [
     ./shell/defaults.nix          # BASH Shell
     ./fonts/fonts.nix             # NERDFONTS
+    ./cli/default.nix
     # ./digitalgarden/default.nix   # Personal MARKDOWN notes/digitalgarden
     # ./nixvim/default.nix
   ];
@@ -35,7 +36,7 @@
     xfce.xfce4-pulseaudio-plugin
     xfce.xfce4-settings
     xfce.xfce4-whiskermenu-plugin
-    lazygit
+    lazygit fd bat ripgrep
     nodejs_22
     
 
@@ -44,6 +45,9 @@
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
     # # fonts?
     # (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+    # command above does not work. Search for nixOS fonts enable
+
+
 
     # # You can also create simple shell scripts directly inside your
     # # configuration. For example, this adds a command 'my-hello' to your
