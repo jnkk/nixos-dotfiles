@@ -32,6 +32,7 @@
     xfce.xfce4-pulseaudio-plugin
     xfce.xfce4-settings
     xfce.xfce4-whiskermenu-plugin
+    lazygit
 
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
