@@ -3,8 +3,17 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-24.05";
+    nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
+    
     home-manager.url = "github:nix-community/home-manager/release-24.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
+    # nixvim.url = "github:nix-community/nixvim";
+    # nixvim.inputs.follows = "nixpkgs";
+    
+    
+    
+    
   };
 
   outputs = { self, nixpkgs, home-manager, ... }:
@@ -22,7 +31,11 @@
       homeConfigurations = {
         jnkk = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
-          modules = [ ./home.nix ];
+          modules = [ 
+            ./home.nix
+            # nixvim.homeManagerModules.nixvim
+            ];
+          
         };
       };
     };

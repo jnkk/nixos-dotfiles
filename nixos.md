@@ -1,11 +1,20 @@
 # Steps I took after installing NixOS
 
-## first boot, activate stuff in configuration.nix
+> [!NOTE]  
+> nix flake update
+
+## First boot, activate stuff in configuration.nix
+
 `git wget curl micro btop vscodium`
 
 ## copy configuration and hardware to dotfiles folder
 
-## change permissions -> `chmod jnkk:users <files>` to configuration and hardware
+```bash
+cd .dotfiles
+sudo cp /etc/nixos/*.nix .
+```
+
+## change permissions -> `chmod jnkk:users <file>` to configuration and hardware
 
 ## enable git
 
@@ -25,20 +34,12 @@ fonts.fontconfig.enable = true;
   home.packages = [
     # Enabling and downloading fonts
     (pkgs.nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "JetBrainsMono"]; })
-
   ];
 ```
 
 
 TODOs:
 1. audio plugins/controls is not there
-2. setting git
-
-
-> [!NOTE]
-> nix flake update
-
-
 
 xfce.xfce4-cpugraph-plugin
 xfce.xfce4-docklike-plugin
@@ -46,4 +47,3 @@ xfce.xfce4-genmon-plugin
 xfce.xfce4-pulseaudio-plugin
 xfce.xfce4-settings
 xfce.xfce4-whiskermenu-plugin
-    

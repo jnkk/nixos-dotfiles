@@ -6,6 +6,7 @@
     ./shell/defaults.nix          # BASH Shell
     ./fonts/fonts.nix             # NERDFONTS
     # ./digitalgarden/default.nix   # Personal MARKDOWN notes/digitalgarden
+    # ./nixvim/default.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
