@@ -1,8 +1,34 @@
+# Steps I took after installing NixOS
 
-1. first boot, activate stuff in configuration.nix
-git wget curl micro btop vscodium
-2. copy configuration and hardware to dotfiles folder
-3. change permissions -> `chmod jnkk:users <files>` to configuration and hardware
+## first boot, activate stuff in configuration.nix
+`git wget curl micro btop vscodium`
+
+## copy configuration and hardware to dotfiles folder
+
+## change permissions -> `chmod jnkk:users <files>` to configuration and hardware
+
+## enable git
+
+```nix
+programs.git = {
+    enable = true;
+    userName = "<yourname>";
+    userEmail = "youremail";
+    extraConfig.init.defaultBranch = "main";
+  };
+```
+
+## enabling and adding fonts
+
+```nix
+fonts.fontconfig.enable = true;
+  home.packages = [
+    # Enabling and downloading fonts
+    (pkgs.nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "JetBrainsMono"]; })
+
+  ];
+```
+
 
 TODOs:
 1. audio plugins/controls is not there
