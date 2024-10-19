@@ -8,8 +8,7 @@
     home-manager.url = "github:nix-community/home-manager/release-24.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-    # nixvim.url = "github:nix-community/nixvim";
-    # nixvim.inputs.follows = "nixpkgs";
+  
     
     
     
@@ -33,7 +32,7 @@
           inherit pkgs;
           modules = [ 
             ./home.nix
-            # nixvim.homeManagerModules.nixvim
+            
             ];
           
         };
