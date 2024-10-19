@@ -88,8 +88,10 @@
     enable = true;
     userName = "Arian Reza";
     userEmail = "arian.reza.setiawan@gmail.com";
-    configExtra = { init.defaultBranch = "main" };
+    extraConfig.init.defaultBranch = "main";
   };
+  
+  
 
   
 
