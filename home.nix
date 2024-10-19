@@ -3,8 +3,9 @@
 {
 
   imports = [
-    ./shell/defaults.nix
-    ./fonts/fonts.nix
+    ./shell/defaults.nix          # BASH Shell
+    ./fonts/fonts.nix             # NERDFONTS
+    # ./digitalgarden/default.nix   # Personal MARKDOWN notes/digitalgarden
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
@@ -34,6 +35,7 @@
     xfce.xfce4-settings
     xfce.xfce4-whiskermenu-plugin
     lazygit
+    nodejs_22
 
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
@@ -93,9 +95,8 @@
     extraConfig.init.defaultBranch = "main";
   };
   
-  
 
-  
+
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
