@@ -38,7 +38,7 @@
     xfce.xfce4-whiskermenu-plugin
     lazygit fd bat ripgrep
     nodejs_22
-    
+	    
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
