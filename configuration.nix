@@ -37,8 +37,12 @@
   services.xserver.enable = true;
 
   # Enable the XFCE Desktop Environment.
+  # services.xserver.displayManager.lightdm.enable = true;
+  # services.xserver.desktopManager.xfce.enable = true;
+
+  # Enable the LXQT Desktop Environment.
   services.xserver.displayManager.lightdm.enable = true;
-  services.xserver.desktopManager.xfce.enable = true;
+  services.xserver.desktopManager.lxqt.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -49,20 +53,32 @@
   # Enable CUPS to print documents.
   # services.printing.enable = true;
 
+  # Pulse audio
+  # hardware.pulseaudio.package = pkgs.pulseaudioFull;
+  
+  # hardware.pulseaudio.enable = true;
+  # hardware.pulseaudio.systemWide = true;
+  # hardware.pulseaudio.support32Bit = true;
+  # services.easyeffects.enable = true;
+  # services.pipewire.wireplumber.enable = true;
+
   # Enable sound with pipewire.
-  hardware.pulseaudio.package = pkgs.pulseaudioFull;
+  
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
+
+    wireplumber.enable = true;
+    
     # If you want to use JACK applications, uncomment this
     #jack.enable = true;
 
     # use the example session manager (no others are packaged yet so this is enabled by default,
     # no need to redefine it in your config for now)
-    #media-session.enable = true;
+    # media-session.enable = true;
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
@@ -82,6 +98,7 @@
   # Install firefox.
   programs.firefox.enable = true;
 
+  programs.dconf.enable = true;
   
 
   # Allow unfree packages
@@ -94,7 +111,7 @@
     wget micro curl git btop
     gcc
     cloudflare-warp
-    
+    pulseaudioFull
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

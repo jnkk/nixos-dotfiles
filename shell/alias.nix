@@ -10,6 +10,7 @@
       ".." = "cd ..";
       lg = "lazygit";
       gs = "git status";
+      code = "codium";
 
 
     };
