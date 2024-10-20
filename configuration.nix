@@ -41,8 +41,13 @@
   # services.xserver.desktopManager.xfce.enable = true;
 
   # Enable the LXQT Desktop Environment.
-  services.xserver.displayManager.lightdm.enable = true;
-  services.xserver.desktopManager.lxqt.enable = true;
+  # services.xserver.displayManager.lightdm.enable = true;
+  # services.xserver.desktopManager.lxqt.enable = true;
+
+  # Enable the KDE/Plasma 5 Desktop Environment.
+  # This is beautiful, but still resource heavy. Still wanna try it in arch or debian.
+  services.xserver.displayManager.sddm.enable = true;
+  services.xserver.desktopManager.plasma5.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {

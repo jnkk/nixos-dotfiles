@@ -7,6 +7,7 @@
 > `nix flake update` is for updating the flake lock file
 > `home-manager switch --flake .` is for switching files inside the home manager for user
 > `nixos-rebuild switch --flake .` is for SYSTEMWIDE change
+> sound plugin works on KDE and LXQT 
 
 ## First boot, activate stuff in configuration.nix
 
@@ -44,7 +45,7 @@ fonts.fontconfig.enable = true;
 
 
 TODOs:
-1. audio plugins/controls in xfce is not available
+1. audio plugins/controls in xfce is not available, but available in KDE and LXQT
 
 xfce.xfce4-cpugraph-plugin
 xfce.xfce4-docklike-plugin
